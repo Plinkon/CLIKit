@@ -12,15 +12,15 @@
 #include <ctime>
 
 #ifdef _WIN32
-    #ifndef NOMINMAX
-        #define NOMINMAX           // Avoid macro conflicts
-    #endif
-    #include <conio.h>             // Windows-only
-    #include <windows.h>
+#ifndef NOMINMAX
+#define NOMINMAX           // Avoid macro conflicts
+#endif
+#include <conio.h>             // Windows-only
+#include <windows.h>
 #else
-    #include <termios.h>
-    #include <unistd.h>            // For STDIN_FILENO
-    #include <sys/ioctl.h>
+#include <termios.h>
+#include <unistd.h>            // For STDIN_FILENO
+#include <sys/ioctl.h>
 #endif
 
 
@@ -740,7 +740,7 @@ namespace CLIKit {
  / ___| |   |_ _| |/ /_ _|_   _|
 | |   | |    | || ' / | |  | |  
 | |___| |___ | || . \ | |  | |  
- \____|_____|___|_|\_\___| |_| :))";
+   \____|_____|___|_|\_\___| |_| :))";
         std::cout << Color::CYAN;
         RenderASCIIArt(asciiArt, true);
         std::cout << Color::RESET << "\n";
@@ -750,6 +750,8 @@ namespace CLIKit {
 
         WaitForInput("Please press any key to start the demo..");
 
+        std::cout << "\n";
+
         // Print Timestamp
         std::cout << "Current Timestamp: "
             << GetTimestamp(true, true, true, true, true, true, true,
@@ -757,7 +759,7 @@ namespace CLIKit {
                 Color::LIGHT_PURPLE, Color::LIGHT_CYAN, Color::LIGHT_RED, "")
             << "\n\n";
 
-        sleep(1000);
+        sleep(2000);
 
         // Demonstrate Colored Text
         std::cout << "Demonstrating Colors:\n";
@@ -770,28 +772,28 @@ namespace CLIKit {
         std::cout << Color::CYAN << "This is cyan text.\n";
         std::cout << Color::RESET << "\n";
 
-        sleep(1000);
+        sleep(2000);
 
         // Demonstrate Typewriter Effect
         PrintInfo("Typewriter Effect:");
         TypewriterEffect("This text appears one character at a time...", 50, 150);
         std::cout << "\n\n";
 
-        sleep(1000);
+        sleep(2000);
 
         // Demonstrate Word by Word Effect
         PrintInfo("Word by Word Effect:");
         WordByWordEffect("This text appears one word at a time...", 500);
         std::cout << "\n\n";
 
-        sleep(1000);
+        sleep(2000);
 
         // Demonstrate Spinner
         PrintInfo("Loading with Spinner:");
-        PrintSpinner(2000, 400); // Spin for 2 seconds with 100ms speed
+        PrintSpinner(3000, 100); // Spin for 3 seconds with 100ms speed
         PrintSuccess("Loading complete!\n");
 
-        sleep(1000);
+        sleep(2000);
 
         // Demonstrate Progress Bar
         PrintInfo("Progress Bar Demonstration:");
@@ -819,7 +821,7 @@ namespace CLIKit {
         }
         std::cout << "\n\n";
 
-        sleep(1000);
+        sleep(2000);
 
         // Demonstrate Input Functions
         PrintInfo("Input Demonstration:");
