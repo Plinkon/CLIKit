@@ -25,7 +25,7 @@ Getting started with CLIKit is easy. Follow these steps:
    git clone https://github.com/Plinkon/CLIKit.git
    ``` 
 
-2.  **Include the header file**: Add `CLIKit.h` to your project directory.
+2.  **Include the header file**: Add `CLIKit.h` *(inside "src/")* to your project directory.
     
 3.  **Compile your program**: Use any modern C++ compiler
 	```bash    
