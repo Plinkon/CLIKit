@@ -111,3 +111,9 @@ If you find CLIKit helpful, consider giving it a ⭐ on GitHub to show your supp
 ### ✨ Made with CLIKit
 
 Feel free to share the amazing projects you’ve built with CLIKit! We’d love to showcase your work in the **Showcase**.
+
+----------
+
+### ❌ Known Issues
+
+- `SetConsoleTitle()` is known to crash console in some situations when calling. Reason unknown
