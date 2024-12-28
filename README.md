@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-💡 **Tip**: You can also refer to the `PrintDemo()` function in `CLIKit.h` to see how all the functions are used.
+💡 **Tip**: You can also refer to the [`PrintDemo()`](./src/CLIKit.h#L726) function in `CLIKit.h` to see how all the functions are used.
 
 ----------
 
