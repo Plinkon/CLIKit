@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-💡 **Tip**: You can experiment with CLIKit’s extensive feature set to make your CLI tools stand out!
+💡 **Tip**: You can also refer to the `PrintDemo()` function in `CLIKit.h` to see how all the functions are used.
 
 ----------
 
