@@ -12,14 +12,17 @@
 #include <ctime>
 
 #ifdef _WIN32
-    #define NOMINMAX           // <-- IMPORTANT to avoid macro conflicts
-    #include <conio.h>         // Windows-only
+    #ifndef NOMINMAX
+        #define NOMINMAX           // Avoid macro conflicts
+    #endif
+    #include <conio.h>             // Windows-only
     #include <windows.h>
 #else
     #include <termios.h>
-    #include <unistd.h>        // For STDIN_FILENO
+    #include <unistd.h>            // For STDIN_FILENO
     #include <sys/ioctl.h>
 #endif
+
 
 enum class Key
 {
@@ -74,8 +77,8 @@ struct Color {
 
 namespace CLIKit {
 
-    inline void sleep(static int Miliseconds) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(Miliseconds));
+    inline void sleep(int Milliseconds) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(Milliseconds));
     }
 
     inline std::tm LocalTimeNow() {
@@ -211,7 +214,7 @@ namespace CLIKit {
                 return value;
             }
             else {
-                // Clear and discard so subsequent I/O isn’t broken:
+                // Clear and discard so subsequent I/O isnâ€™t broken:
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 return std::nullopt;
