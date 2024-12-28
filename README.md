@@ -46,9 +46,9 @@ int main() {
     for (int i = 0; i <= 100; ++i) {
         std::cout << "\r" << CLIKit::ProgressBar( // create a progress bar
             i, 100, 50, "Progress:", "Done", "=", "-",
-            CLIKit::Color::GREEN, CLIKit::Color::GRAY,
-            CLIKit::Color::WHITE, CLIKit::Color::LIGHT_GREEN,
-            CLIKit::Color::WHITE, CLIKit::Color::LIGHT_BLUE,
+            Color::GREEN, Color::GRAY,
+            Color::WHITE, Color::LIGHT_GREEN,
+            Color::WHITE, Color::LIGHT_BLUE,
             true, true, true
         ) << std::flush;
         sleep(100); // sleep for 100 milliseconds, built-in function
