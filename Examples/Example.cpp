@@ -1,4 +1,4 @@
-#include "../CLIKit.h"
+#include "../src/CLIKit.h"
 using namespace std;
 
 int main() {
